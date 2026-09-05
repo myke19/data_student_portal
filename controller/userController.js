@@ -1,4 +1,4 @@
-const userModel = require("../model/userModel")
+import userModel from ("../model/userModel")
 
 
 
