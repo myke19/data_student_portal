@@ -1,6 +1,6 @@
-import express from ('express');
-import mongoose from ('mongoose');
-import userRoute from ("./routes/userRoutes.js");
+import express from "express";
+import mongoose from "mongoose";
+import userRoute from "./routes/userRoutes.js";
 
 const compass_string = "mongodb://localhost:27017/student_portal_db"
 const atlas_string = "mongodb://apeyiomotobi04_db_user:benita06@ac-byl4cdr-shard-00-00.kmrpclp.mongodb.net:27017,ac-byl4cdr-shard-00-01.kmrpclp.mongodb.net:27017,ac-byl4cdr-shard-00-02.kmrpclp.mongodb.net:27017/?ssl=true&replicaSet=atlas-nnppk8-shard-0&authSource=admin&appName=Cluster0"
