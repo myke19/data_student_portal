@@ -88,4 +88,4 @@ const deleteStudent = async (req , res) => {
     }
 }
 
-module.exports = { createStudent , getStudentId , getStudentById , updateStudent, deleteStudent }
+export default { createStudent , getStudentId , getStudentById , updateStudent, deleteStudent }
