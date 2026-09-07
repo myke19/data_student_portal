@@ -13,7 +13,7 @@ const app = express();
 const port = 8080;
 
 
-app.use(express.json)
+app.use(express.json())
 
 app.get("/" , (req, res) => {
     res.send("Server is active")
