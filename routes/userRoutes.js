@@ -1,14 +1,15 @@
 import express from "express";
 
-import userRoute from express.Router()
+const userRoute = express.Router();
 
-import { createStudent, getStudentId, getStudentById, deleteStudent, updateStudent }
- from "../controller/userController";
+import { createStudent, studentLogin, getAllStudent, getStudentById, deleteStudent, updateStudent }
+ from "../controller/userController.js";
 
 userRoute.post("/studentdata", createStudent)
-userRoute.get("/studentId", getStudentId)
+userRoute.get("/all-student", getAllStudent)
 userRoute.get("/student-by/:id", getStudentById)
 userRoute.patch("/update-name/:userId", updateStudent)
 userRoute.delete("/delete-acct/:userId", deleteStudent)
+userRoute.get("/login", studentLogin)
 
-export default userRoute
+export default userRoute;

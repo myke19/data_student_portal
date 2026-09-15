@@ -1,9 +1,11 @@
+import "dotenv/config";
 import express from "express";
 import mongoose from "mongoose";
 import userRoute from "./routes/userRoutes.js";
+import itemRoute from "./routes/itemRoutes.js";
+const compass_string = process.env.COMPASS_STRING
+const atlas_string = process.env.ATLAS_STRING
 
-const compass_string = "mongodb://localhost:27017/student_portal_db"
-const atlas_string = "mongodb://apeyiomotobi04_db_user:benita06@ac-byl4cdr-shard-00-00.kmrpclp.mongodb.net:27017,ac-byl4cdr-shard-00-01.kmrpclp.mongodb.net:27017,ac-byl4cdr-shard-00-02.kmrpclp.mongodb.net:27017/?ssl=true&replicaSet=atlas-nnppk8-shard-0&authSource=admin&appName=Cluster0"
 
 mongoose.connect(atlas_string)
 .then(() => console.log("MongoDB Connected"))
@@ -20,6 +22,7 @@ app.get("/" , (req, res) => {
     });
 
 app.use("/api/student", userRoute)
+app.use("/items", itemRoute)
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
